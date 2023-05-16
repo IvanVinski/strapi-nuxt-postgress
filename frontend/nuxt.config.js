@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "frontend",
+    title: "Movie list",
     htmlAttrs: {
       lang: "en",
     },
@@ -13,8 +13,6 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
-
-  target: "static",
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
@@ -49,8 +47,9 @@ export default {
     manifest: {
       name: "Nuxt.js PWA Movie list",
       short_name: "Nuxt.js PWA",
+      description: "Example Nuxt movie list app!",
+      theme_color: "#33334E",
       lang: "en",
-      display: "standalone",
     },
   },
 
