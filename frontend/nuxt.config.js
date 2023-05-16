@@ -14,6 +14,8 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
+  target: "static",
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -27,6 +29,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
+    "@nuxtjs/pwa",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -34,7 +37,6 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     "@nuxtjs/i18n",
-    "@nuxtjs/pwa",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
