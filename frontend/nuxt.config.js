@@ -45,6 +45,15 @@ export default {
     baseURL: "http://localhost:1337",
   },
 
+  pwa: {
+    manifest: {
+      name: "Nuxt.js PWA Movie list",
+      short_name: "Nuxt.js PWA",
+      lang: "en",
+      display: "standalone",
+    },
+  },
+
   i18n: {
     locales: [
       {
