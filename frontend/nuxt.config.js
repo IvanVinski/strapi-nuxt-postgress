@@ -14,11 +14,13 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
+  target: "static",
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ["@/plugins/vueflags.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -40,7 +42,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: "http://localhost:1337",
+    baseURL: process.env.API_URL,
   },
 
   pwa: {
@@ -58,10 +60,20 @@ export default {
       {
         code: "en",
         file: "en.json",
+        name: "English",
+        flag: "us",
       },
       {
         code: "hr-HR",
         file: "hr.json",
+        name: "Croatian",
+        flag: "hr",
+      },
+      {
+        code: "de-DE",
+        file: "de.json",
+        name: "German",
+        flag: "de",
       },
     ],
     langDir: "assets/locales",
