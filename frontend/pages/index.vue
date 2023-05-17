@@ -9,7 +9,7 @@
             v-for="movie in movies"
           >
             <img
-              :src="`http://localhost:1337${movie.attributes.image.data.attributes.url}`"
+              :src="`${movie.attributes.image.data.attributes.url}`"
               class="h-60 object-contain"
             />
             <div class="flex flex-col m-4">
