@@ -6,7 +6,7 @@
         <ul>
           <li class="flex gap-10 m-5" v-for="movie in movies">
             <img
-              :src="`${$config.apiURL}${movie.attributes.image.data.attributes.url}`"
+              :src="`${movie.attributes.image.data.attributes.url}`"
               class="h-60"
             />
             <div class="flex flex-col gap-5">
