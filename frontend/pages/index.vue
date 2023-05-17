@@ -4,12 +4,15 @@
       <div class="flex flex-col gap-10 w-full md:w-3/4 lg:w-2/3">
         <div class="text-6xl">{{ $t("ListOfMovies") }}</div>
         <ul>
-          <li class="flex gap-10 m-5" v-for="movie in movies">
+          <li
+            class="flex flex-col md:flex-row md:gap-10 m-5 border rounded-lg overflow-hidden items-center"
+            v-for="movie in movies"
+          >
             <img
-              :src="`${movie.attributes.image.data.attributes.url}`"
-              class="h-60"
+              :src="`http://localhost:1337${movie.attributes.image.data.attributes.url}`"
+              class="h-60 object-contain"
             />
-            <div class="flex flex-col gap-5">
+            <div class="flex flex-col m-4">
               <div class="text-4xl">{{ movie.attributes.name }}</div>
               <div class="text-lg">
                 {{ movie.attributes.description }}
